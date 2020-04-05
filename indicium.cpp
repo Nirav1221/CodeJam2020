@@ -62,7 +62,7 @@ int genMat(int mat[5][5], int n, int k)
 	{
 		return 1;
 	}
-	
+	//Generate and check all possible traces for unique row and columns
 	for(a=1;a<=n;a++)
 	{
 		if(uniqueRow(mat, r, a, n) * uniqueCol(mat, c, a , n) == 1)
@@ -76,7 +76,7 @@ int genMat(int mat[5][5], int n, int k)
 			}
 				
 	}
-	
+	//No such trace found.
 	return 0;
 	
 }
@@ -86,11 +86,8 @@ int main()
 	int i,j,l,t;
 	cin >> t;
 	int n[t],k[t];
-	
+	//Only works for 1st case .. hence 44...
 	int grid [44][5][5] = {0};
-	
-	
-	
 	for(i=0;i<t;i++)
 	{
 		cin >> n[i] >> k[i];
